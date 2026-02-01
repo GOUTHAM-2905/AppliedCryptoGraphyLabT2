@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-// Check if a number is prime
 bool isPrime(int n) {
     if (n < 2) return false;
     if (n == 2) return true;
@@ -15,7 +14,6 @@ bool isPrime(int n) {
     return true;
 }
 
-// Generate primes up to a given limit
 vector<int> generatePrimes(int limit) {
     vector<int> primes;
 
@@ -26,7 +24,6 @@ vector<int> generatePrimes(int limit) {
     return primes;
 }
 
-// GCD using Euclidean Algorithm
 int gcd(int a, int b) {
     while (b != 0) {
         int temp = b;
@@ -36,7 +33,6 @@ int gcd(int a, int b) {
     return a;
 }
 
-// Euler's Totient Function
 int eulerPhi(int n) {
     int result = n;
 
@@ -55,18 +51,17 @@ int eulerPhi(int n) {
 }
 
 int main() {
-    // Primes up to 50
+    
     vector<int> primes = generatePrimes(50);
     cout << "Primes up to 50: ";
     for (int p : primes)
         cout << p << " ";
     cout << endl;
 
-    // GCD
     cout << "GCD(48, 18): " << gcd(48, 18) << endl;
 
-    // Euler Phi
     cout << "Phi(36): " << eulerPhi(36) << endl;
 
     return 0;
 }
+
